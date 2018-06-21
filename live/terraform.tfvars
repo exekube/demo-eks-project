@@ -5,7 +5,7 @@ terragrunt = {
 
     config {
       shared_credentials_file = "/root/.aws/credentials"
-      region                  = "${get_env("TF_VAR_aws_region", "us-east-1")}"
+      region                  = "${get_env("TF_VAR_aws_region", "us-west-2")}"
       bucket                  = "eks-experimental-ilya-tfstate-dev"
       key                     = "${path_relative_to_include()}"
     }

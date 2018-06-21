@@ -25,7 +25,7 @@ locals {
 
 provider "aws" {
   version                 = ">= 1.22.0"
-  region                  = "us-east-1"
+  region                  = "us-west-2"
   shared_credentials_file = "/root/.aws/credentials"
 }
 
