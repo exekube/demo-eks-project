@@ -2,7 +2,7 @@ version: "3"
 
 services:
   xk:
-    image: exekube/exekube:0.3.2-aws
+    image: exekube/exekube:0.4.0-aws
     working_dir: /project
     environment:
       USER: root
