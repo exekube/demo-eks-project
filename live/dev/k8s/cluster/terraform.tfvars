@@ -12,10 +12,10 @@ terragrunt = {
 
 # ↓ Module configuration (empty means all default)
 
-vpc_id = "vpc-8e0debf4"
-
 subnets = [
-  "subnet-9d37effa",
-  "subnet-6e9f4540",
-  "subnet-78452932",
+  "subnet-4d24b306",
+  "subnet-19bdc860",
+  "subnet-b8b5f5e2",
 ]
+
+vpc_id = "vpc-0b756772"
