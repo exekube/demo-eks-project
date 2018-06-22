@@ -2,13 +2,12 @@
 
 terragrunt = {
   terraform {
-    source = "/project/modules//guestbook"
+    source = "/project/modules//nginx-ingress"
   }
 
   dependencies {
     paths = [
-      "../../kube-system/administration-tasks",
-      "../../kube-system/nginx-ingress",
+      "../../kube-system/helm-initializer",
     ]
   }
 
@@ -18,4 +17,7 @@ terragrunt = {
 }
 
 # ↓ Module configuration (empty means all default)
+
+
+# load_balancer_ip = ""
 

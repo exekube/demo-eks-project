@@ -15,8 +15,7 @@ metadata:
 spec:
   rules:
     {{- range .Values.ingress.hosts }}
-    - host: {{ . }}
-      http:
+    - http:
         paths:
           - backend:
               serviceName: frontend
