@@ -1,12 +1,13 @@
 # ↓ Module metadata
+
 terragrunt = {
   terraform {
-    source = "/project/modules//myapp"
+    source = "/project/modules//guestbook"
   }
 
   dependencies {
     paths = [
-      "../../kube-system/helm-initializer",
+      "../../kube-system/administration-tasks",
     ]
   }
 
@@ -16,3 +17,4 @@ terragrunt = {
 }
 
 # ↓ Module configuration (empty means all default)
+

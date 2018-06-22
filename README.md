@@ -2,9 +2,7 @@
 
 This is a proof-of-concept solution that uses:
 
-- Docker for Desktop on developers' local machines
+- Docker Compose as a local environment to free up DevOps Engineers from managing tools like `aws` CLI, `kubectl`, `helm`, `heptio-aws-authenticator`, `terraform`, etc.
 - Terraform for creating and managing AWS VPC and EKS-related resources
-- Terragrunt for using Terraform in multiple environments
-- Helm for managing Kubernetes resources
-
-> Blocker: EKS doesn't want to create a cluster due to AWS Cloud capacity issues.
+- Terragrunt for using Terraform in multiple environments with maximum code reuse
+- Helm for packaging and managing Kubernetes resources
