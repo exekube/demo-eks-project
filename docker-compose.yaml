@@ -7,17 +7,12 @@ services:
     environment:
       USER: root
       ENV: ${ENV:?err}
-
-
       TF_INPUT: "0"
       TF_LOG:
       TF_VAR_aws_region: us-west-2
       TF_VAR_cluster_name: eks-experimental-ilya
-      # TF_VAR_serviceaccount_key: /project/live/${ENV}/secrets/kube-system/owner.json
-
       TF_VAR_default_dir: /project/live/${ENV}/k8s
       TF_VAR_secrets_dir: /project/live/${ENV}/secrets
-
     ports:
       - 8001:8001
     volumes:
@@ -26,8 +21,8 @@ services:
       - ./.config/${ENV}/helm:/root/.helm
       - ./.config/${ENV}/terragrunt:/root/.terragrunt
       - ./.config/${ENV}/kube:/root/.kube
-
-      # EXEKUBE DEVELOPMENT
+      # Below is a local directory with Terraform modules
       - ../../exekube/modules:/exekube-modules
       # ---
-    command: kubectl proxy --address="0.0.0.0" --accept-hosts ".*"
+    # command: kubectl port-forward svc/frontend 8001:80
+    command: kubectl proxy --address="0.0.0.0" --accept-hosts "^*$$"
