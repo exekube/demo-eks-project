@@ -11,8 +11,10 @@ variable "vpc_id" {}
 
 locals {
   worker_groups = "${list(
-                  map("instance_type","t2.small",
-                      "additional_userdata","echo foo bar"
+                  map("instance_type","t2.medium",
+                      "additional_userdata","echo foo bar",
+                      "asg_desired_capacity","2",
+                      "asg_min_size","2"
                       ),
   )}"
 
