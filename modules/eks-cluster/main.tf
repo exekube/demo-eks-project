@@ -30,8 +30,9 @@ provider "aws" {
 }
 
 module "eks" {
-  source        = "/project/vendor/terraform-aws-eks"
-  version       = "1.0.0"
+  source = "github.com/ilyasotkov/terraform-aws-eks"
+
+  # version       = "1.0.0"
   cluster_name  = "${var.cluster_name}"
   subnets       = "${var.subnets}"
   tags          = "${local.tags}"
