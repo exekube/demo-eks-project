@@ -44,6 +44,11 @@ output "k8s_version" {
   value = "${module.eks.cluster_version}"
 }
 
-output "kubeconfig" {
-  value = "${module.eks.kubeconfig}"
+# output "kubeconfig" {
+#   value = "${module.eks.kubeconfig}"
+# }
+
+resource "local_file" "kubeconfig" {
+  content  = "${module.eks.kubeconfig}"
+  filename = "/root/.kube/config"
 }
