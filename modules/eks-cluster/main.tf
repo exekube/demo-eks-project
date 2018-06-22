@@ -30,14 +30,13 @@ provider "aws" {
 }
 
 module "eks" {
-  source             = "terraform-aws-modules/eks/aws"
-  version            = "1.0.0"
-  cluster_name       = "${var.cluster_name}"
-  subnets            = "${var.subnets}"
-  tags               = "${local.tags}"
-  vpc_id             = "${var.vpc_id}"
-  config_output_path = "."
-  worker_groups      = "${local.worker_groups}"
+  source        = "/project/vendor/terraform-aws-eks"
+  version       = "1.0.0"
+  cluster_name  = "${var.cluster_name}"
+  subnets       = "${var.subnets}"
+  tags          = "${local.tags}"
+  vpc_id        = "${var.vpc_id}"
+  worker_groups = "${local.worker_groups}"
 }
 
 output "k8s_version" {
