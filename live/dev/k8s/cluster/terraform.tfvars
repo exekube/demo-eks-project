@@ -13,9 +13,9 @@ terragrunt = {
 # ↓ Module configuration (empty means all default)
 
 subnets = [
-  "subnet-4d24b306",
-  "subnet-19bdc860",
-  "subnet-b8b5f5e2",
+  "subnet-5f4ddb14",
+  "subnet-a90470d0",
+  "subnet-dd470487",
 ]
 
-vpc_id = "vpc-0b756772"
+vpc_id = "vpc-eabfad93"
