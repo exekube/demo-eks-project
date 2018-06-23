@@ -10,7 +10,7 @@ terragrunt = {
   }
 }
 
-# ↓ Module configuration (empty means all default)
+# ↓ Environment-specific configuration (empty means all default)
 
 subnets = [
   "subnet-5f4ddb14",

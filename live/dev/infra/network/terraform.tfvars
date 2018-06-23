@@ -10,5 +10,5 @@ terragrunt = {
   }
 }
 
-# ↓ Module configuration (empty means all default)
+# ↓ Environment-specific configuration (empty means all default)
 
